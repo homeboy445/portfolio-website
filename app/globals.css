@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: transparent;
+    --foreground: #1f2937;
+  }
+
+  .dark {
+    --background: transparent;
+    --foreground: #f3f4f6;
+  }
+}
+
+/* Add smooth transitions for theme changes */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Disable transitions on page load */
+.no-transitions * {
+  transition: none !important;
+}
+
+/* Override specific transitions that shouldn't be smooth */
+.transition-none {
+  transition: none !important;
+}
