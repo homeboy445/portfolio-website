@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: '[Your Name] - Full-Stack Developer',
+	title: 'Akshit Kushwaha - Full-Stack Developer',
 	description:
 		'Welcome to my portfolio! I am a passionate full-stack developer who bridges the gap between frontend and backend development. Specializing in creating complete web solutions, from beautiful user interfaces to robust server architectures.',
 	keywords: [
@@ -34,22 +34,22 @@ export const metadata: Metadata = {
 		'DevOps',
 		'System Architecture',
 		'Web Development',
-		'[Your Name]',
+		'Akshit Kushwaha',
 	],
-	authors: [{ name: '[Your Name]' }],
-	creator: '[Your Name]',
+	authors: [{ name: 'Akshit Kushwaha' }],
+	creator: 'Akshit Kushwaha',
 	openGraph: {
-		title: '[Your Name] - Full-Stack Developer Portfolio',
+		title: 'Akshit Kushwaha - Full-Stack Developer Portfolio',
 		description:
 			'Passionate full-stack developer creating complete web solutions. Explore my projects and technical expertise across the entire development stack.',
 		url: 'https://your-domain.com',
-		siteName: '[Your Name] - Portfolio',
+		siteName: "Akshit's Portfolio",
 		images: [
 			{
 				url: '/og-image.jpg',
 				width: 1200,
 				height: 630,
-				alt: '[Your Name] - Full-Stack Developer Portfolio',
+				alt: 'Akshit Kushwaha - Full-Stack Developer Portfolio',
 			},
 		],
 		locale: 'en_US',
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: 'summary_large_image',
-		title: '[Your Name] - Full-Stack Developer',
+		title: 'Akshit Kushwaha - Full-Stack Developer',
 		description:
 			'Passionate full-stack developer creating complete web solutions. Explore my projects and technical expertise across the entire development stack.',
 		creator: '@yourusername',

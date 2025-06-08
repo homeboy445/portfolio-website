@@ -30,13 +30,15 @@ const portfolioData = {
       company: "Wingify (VWO)",
       period: "June, 2022 - Present",
       highlights: [
-        "Led core JavaScript library development powering A/B testing for millions of websites",
-        "Designed cross-thread sync modules and performance-optimized architectures",
-        "Optimized Core Web Vitals (FCP, LCP, TBT) through advanced execution flow improvements",
-        "Developed custom text-based CSS selector engine for dynamic site structures",
-        "Led migration of VWO library files to Google Cloud Platform",
-        "Core developer of Google Optimize Migration Chrome Extension",
-        "Built Page Analyzer backend service using Node.js and Puppeteer"
+        "Played a key role in architecting, shaping, and maintaining the core JavaScript library (events-driven-jslib) that powers VWO's A/B, MVT, and Split testing features across millions of client websites. Took full ownership of its architecture, development, and ongoing enhancements, including its Sync and Async loading modes optimized for modern performance standards.",
+        "Designed and implemented 100+ production-grade features end-to-end, including advanced segmentation options and campaign configurations. Collaborated extensively with QA, product managers, and other engineers to ensure high stability, feature completeness, and seamless rollout.",
+        "Led optimization of the library's execution flow to minimize impact on Core Web Vitals (FCP, LCP, TBT). Applied deep understanding of browser internals, event loop behavior, rendering pipeline, and asynchronous execution to significantly enhance real-world page performance.",
+        "Developed a custom text-based CSS selector engine to query DOM elements using visible text content—an essential solution for cases where conventional selectors failed due to dynamic site structure. Delivered this with strong emphasis on performance and cross-browser reliability.",
+        "Led the successful migration of all VWO library files and static assets from an in-house CDN to Google Cloud Platform. Overhauled legacy build pipelines, configured regionalized caching, and ensured a zero-downtime transition for all clients globally.",
+        "Served as a core member in the rapid development of the Google Optimize Migration Chrome Extension. Delivered an MVP within 2 days and the full tool in just one week. Implemented both frontend UI and backend transformation logic to convert Google Optimize campaigns to VWO format.",
+        "Built and deployed the Page Analyzer backend service using Node.js and Puppeteer. This internal diagnostic tool automatically detects issues in clients' VWO setup and returns prescriptive feedback. The service was containerized via Docker and deployed on Kubernetes.",
+        "Investigated and resolved numerous unique and complex client issues post library rollout, ranging from visual bugs and JS conflicts to data tracking discrepancies.",
+        "Contributed to the frontend codebase of VWO's internal UI platform built using AngularJS, developing and enhancing several UI features supporting the client-side library."
       ]
     },
     {
@@ -44,10 +46,10 @@ const portfolioData = {
       company: "Wingify (VWO)",
       period: "Dec - Mar, 2021",
       highlights: [
-        "Developed Puppeteer script for network call analysis",
-        "Contributed to events-driven-jslib library development",
-        "Designed Syncer module for cross-thread synchronization",
-        "Built Cypress-based cross-thread unit testing suite"
+        "Developed a Puppeteer script to analyze and debug network call patterns across client pages. The script was used internally to investigate integration inconsistencies and monitor network-layer behavior of VWO scripts.",
+        "Contributed bug fixes and logic improvements to the early versions of the events-driven-jslib library, ensuring better reliability and preparing it for production rollout.",
+        "Designed and implemented the Syncer module—a declarative and robust mechanism to synchronize JavaScript object properties, cookies, and localStorage values between main and Worker threads.",
+        "Architected a Cypress-based cross-thread unit testing suite, building custom APIs that passed runtime values between threads and validated execution results from Worker contexts."
       ]
     },
     {
@@ -55,10 +57,10 @@ const portfolioData = {
       company: "LibreOffice, Google Summer of Code (GSoC)",
       period: "Jun - Aug, 2021",
       highlights: [
-        "Integrated graphics-rendering test suite using C++, OpenGL, and Skia",
-        "Developed cross-platform GPU configuration utility",
-        "Enhanced rendering failure detection across multiple platforms",
-        "Contributed to open-source development using Git and Gerrit"
+        "Integrated a comprehensive suite of graphics-rendering test cases using C++, OpenGL, and Skia. This significantly improved automated test coverage and enabled early detection of visual regressions in the CI pipeline.",
+        "Developed a lightweight cross-platform utility to probe GPU and driver stack configurations, log graphics backend capabilities, and automatically report anomalies.",
+        "Enhanced LibreOffice's rendering failure detection mechanisms across Windows, macOS, and Linux platforms, improving diagnostic accuracy.",
+        "Worked with open-source workflows using Git, Gerrit, and Jenkins CI, contributing clean, tested patches through an international collaborative development process."
       ]
     }
   ],
@@ -150,123 +152,120 @@ const portfolioData = {
   projects: [
     {
       title: "Debatotron",
-      description: "An AI-powered platform for hosting and moderating structured online debates with real-time fact-checking and argument analysis.",
+      imageId: "debatotron",
+      imageAlt: "Debatotron Project Screenshot",
+      description: "A real-time debate platform built with React, Node.js, and PostgreSQL that enables users to create and participate in professional debates with friends or strangers.",
+      link: "https://debatotron.vercel.app/",
+      github: "https://github.com/homeboy445/Debatotron",
       frontend: {
-        title: "Modern React Frontend",
+        title: "React Frontend",
         features: [
-          "Real-time debate interface with WebSocket integration",
-          "Rich text editor with argument structuring tools",
-          "Interactive visualization of debate flow and points",
-          "Responsive design with dark/light mode support",
-          "Client-side caching for improved performance"
+          "Live main feed for debate updates and activities",
+          "Intuitive debate creation and joining interface",
+          "Two-sided debate participation system",
+          "Real-time notification system for updates and messages",
+          "Customizable user profiles and friend system"
         ]
       },
       backend: {
-        title: "AI-Powered Backend",
+        title: "Node.js & PostgreSQL Backend",
         features: [
-          "GPT-4 integration for argument analysis",
-          "WebSocket server for real-time updates",
-          "Automated fact-checking system",
-          "JWT-based authentication",
-          "Rate limiting and abuse prevention"
+          "WebSocket integration for real-time debate updates",
+          "PostgreSQL for reliable data persistence",
+          "Friend system with real-time messaging",
+          "Notification system for friend requests and mentions",
+          "Debate room management and persistence"
         ]
-      },
-      metrics: [
-        "99.9% uptime with automated failover",
-        "Average response time < 100ms",
-        "50,000+ active monthly users",
-        "4.8/5 user satisfaction rating"
-      ]
+      }
     },
     {
       title: "Xamify",
-      description: "A comprehensive exam management system that streamlines the creation, distribution, and evaluation of online assessments.",
+      imageId: "xamify",
+      imageAlt: "Xamify Assessment Platform Screenshot",
+      description: "A comprehensive exam management system designed to revolutionize online assessments. Features two dedicated platforms - one for students to take exams with multiple answer formats, and another for teachers to manage students and create assessments efficiently.",
+      link: "",
+      github: "",
+      advancedLinks: [
+        { title: "Student Platform", link: "https://xamify.vercel.app/" }, 
+        { title: "Teacher Platform", link: "https://xamify-teacher.vercel.app" },
+        { title: "Backend API", link: "https://xamify.herokuapp.com/api" }
+      ],
       frontend: {
-        title: "Next.js Frontend",
+        title: "React.js Frontend",
         features: [
-          "Dynamic exam creation interface",
-          "Real-time progress tracking",
-          "Advanced question type support",
-          "Offline-first architecture",
-          "Automated proctoring UI"
+          "Multiple answer submission formats (typing, handwritten, MCQ)",
+          "Offline exam submission capability",
+          "Intuitive dashboard for active, past, and upcoming tests",
+          "Specially designed UI for student and teacher needs",
+          "Real-time test progress tracking and management"
         ]
       },
       backend: {
-        title: "Scalable Backend",
+        title: "Node.js & API Infrastructure",
         features: [
-          "Distributed exam processing",
-          "ML-based answer evaluation",
-          "Real-time result generation",
-          "Secure file storage system",
-          "Load-balanced architecture"
+          "Comprehensive student and teacher data management",
+          "Course, enrollment, and subject management system",
+          "PDF generation for test results and reports",
+          "Secure authentication and role-based access",
+          "Robust API infrastructure for both platforms"
         ]
-      },
-      metrics: [
-        "Handles 100,000+ concurrent users",
-        "Zero data loss guarantee",
-        "Average grading time < 30 seconds",
-        "99.99% accuracy in automated scoring"
-      ]
+      }
     },
     {
       title: "File Sharer",
-      description: "A secure peer-to-peer file sharing platform with end-to-end encryption and automatic file compression.",
+      imageId: "file-sharer",
+      imageAlt: "File Sharer Interface Screenshot",
+      description: "A modern peer-to-peer file sharing platform built with React and WebRTC, enabling secure room-based file sharing with real-time transfer updates via WebSocket integration.",
+      link: "https://file-sharer-app.vercel.app/",
+      github: "https://github.com/homeboy445/fileSharerApp",
       frontend: {
-        title: "Vue.js Frontend",
+        title: "React Frontend",
         features: [
-          "Drag-and-drop file upload",
-          "Progressive file loading",
-          "Real-time transfer status",
-          "QR code sharing support",
-          "Bandwidth optimization UI"
+          "Intuitive room-based file sharing interface",
+          "Multi-file upload and transfer support",
+          "Real-time transfer progress monitoring",
+          "Drag-and-drop file management",
+          "Responsive file sharing dashboard"
         ]
       },
       backend: {
-        title: "P2P Backend",
+        title: "P2P Architecture",
         features: [
-          "WebRTC-based P2P transfer",
-          "End-to-end encryption",
-          "Automatic compression",
-          "File integrity verification",
-          "Temporary storage management"
+          "WebRTC-powered peer-to-peer connections",
+          "WebSocket integration for real-time updates",
+          "Room-based connection management",
+          "Secure data channel establishment",
+          "Efficient chunk-based file transfer"
         ]
-      },
-      metrics: [
-        "10GB+ file size support",
-        "Transfer speeds up to 1GB/s",
-        "Zero server storage required",
-        "5M+ files shared monthly"
-      ]
+      }
     },
     {
       title: "Web Assist AI",
-      description: "An intelligent browser extension that enhances web browsing with AI-powered features like content summarization and smart navigation.",
+      imageId: "web-assist",
+      imageAlt: "Web Assist AI Extension Screenshot",
+      description: "An intelligent Chrome extension powered by Google's Gemini API that interacts with webpages like a human assistant, offering natural language commands and intelligent automation.",
+      link: "",
+      github: "https://github.com/homeboy445/WebAssistAI",
       frontend: {
         title: "Chrome Extension UI",
         features: [
-          "Context-aware sidebar",
-          "Custom annotation tools",
-          "Voice command support",
-          "Smart bookmark management",
-          "Customizable themes"
+          "Natural language commands with audio & text input",
+          "Real-time DOM interaction (click, scroll, input)",
+          "Intelligent content summarization",
+          "Task automation interface",
+          "Context-aware assistant panel"
         ]
       },
       backend: {
-        title: "AI Backend Services",
+        title: "AI & Extension Backend",
         features: [
-          "Natural language processing",
-          "Page content analysis",
-          "Personalized recommendations",
-          "Cross-device sync",
-          "Privacy-focused data handling"
+          "Gemini API integration for NLP",
+          "Chrome Extensions API implementation",
+          "Real-time webpage interaction engine",
+          "Content analysis and summarization",
+          "Task automation processing"
         ]
-      },
-      metrics: [
-        "100,000+ active installations",
-        "90% reduction in search time",
-        "Average 4.9/5 store rating",
-        "Processing 1M+ pages daily"
-      ]
+      }
     }
   ]
 };

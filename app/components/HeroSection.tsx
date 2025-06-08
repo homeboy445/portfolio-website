@@ -3,21 +3,36 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import portfolioData from '../data.js';
-import type { Skill } from '../types';
+
+type SkillColor = 'yellow' | 'blue' | 'cyan' | 'green' | 'orange' | 'purple';
+interface Skill {
+    name: string;
+    color: SkillColor;
+}
+
+const gradientMap: Record<SkillColor, string> = {
+    yellow: "from-amber-400 to-yellow-500",
+    blue: "from-blue-400 to-blue-600",
+    cyan: "from-cyan-400 to-cyan-600",
+    green: "from-emerald-400 to-green-600",
+    orange: "from-orange-400 to-orange-600",
+    purple: "from-purple-400 to-purple-600"
+};
 
 export default function HeroSection() {
     const [selectedStack, setSelectedStack] = useState<'frontend' | 'backend' | 'devops' | null>(null);
+    
     const skills: Skill[] = [
         { name: 'JavaScript', color: 'yellow' },
         { name: 'TypeScript', color: 'blue' },
         { name: 'React', color: 'cyan' },
         { name: 'Node.js', color: 'green' },
-        { name: 'AWS', color: 'orange' },
+        { name: 'GCP', color: 'orange' },
         { name: 'PostgreSQL', color: 'purple' }
     ];
 
     return (
-        <section className="min-h-screen relative overflow-hidden py-24 md:py-0 mt-10">
+        <section className="min-h-screen relative overflow-hidden py-[10px] md:py-0 mt-5">
             <div className="absolute inset-0">
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20" />
             </div>
@@ -53,10 +68,23 @@ export default function HeroSection() {
                         ))}
                     </div>
                     <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-6 md:mb-2 mt-5">
-                        {skills.map((skill, i: number) => (
+                        {skills.map((skill, i) => (
                             <span
                                 key={`${skill.name}-${i}`}
-                                className={`px-3 md:px-4 py-1.5 md:py-2 rounded-full text-xs md:text-sm bg-${skill.color}-100 text-${skill.color}-600`}
+                                className={`
+                                    relative px-4 md:px-5 py-1.5 md:py-2 
+                                    rounded-full text-xs md:text-sm 
+                                    text-white font-medium 
+                                    bg-gradient-to-r ${gradientMap[skill.color]}
+                                    shadow-md hover:shadow-xl 
+                                    transition-all duration-300 
+                                    hover:scale-105 cursor-default
+                                    before:absolute before:inset-0 
+                                    before:bg-white before:rounded-full 
+                                    before:opacity-0 before:transition-opacity
+                                    hover:before:opacity-10
+                                    cursor-pointer
+                                `}
                             >
                                 {skill.name}
                             </span>
@@ -135,7 +163,7 @@ export default function HeroSection() {
                                 <ul className="space-y-1.5 md:space-y-2 text-xs md:text-sm text-gray-600">
                                     <li className="flex items-center gap-2">
                                         <div className="w-1.5 h-1.5 bg-teal-500 rounded-full" />
-                                        AWS Infrastructure
+                                        Google Cloud Platform
                                     </li>
                                     <li className="flex items-center gap-2">
                                         <div className="w-1.5 h-1.5 bg-teal-500 rounded-full" />
