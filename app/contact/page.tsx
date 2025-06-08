@@ -82,7 +82,7 @@ export default function ContactPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
                     >
-                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+                        I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
                     </motion.p>
                 </motion.div>
 

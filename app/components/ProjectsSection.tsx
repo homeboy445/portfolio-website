@@ -4,23 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import data from '../data';
 
-interface Project {
-    title: string;
-    description: string;
-    link: string;
-    github: string;
-    imageId: string;
-    imageAlt: string;
-    frontend: {
-        title: string;
-        features: string[];
-    };
-    backend: {
-        title: string;
-        features: string[];
-    };
-}
-
 export default function ProjectsSection() {
     const projects = data.projects || [];
     const [currentIndex, setCurrentIndex] = useState(0);

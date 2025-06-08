@@ -39,7 +39,7 @@ export default function AboutPage() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [showNavigationBar]);
 
   return (
     <main className="min-h-screen bg-background text-foreground py-24 px-4 md:px-16 mt-10 max-w-7xl mx-auto flex flex-col justify-center items-center relative">
@@ -144,13 +144,13 @@ export default function AboutPage() {
           Work Experience
         </h1>
         <div className="flex flex-col">
-          {portfolioData.workExperience.map((job, index) => (
+          {portfolioData.workExperience.map((job) => (
             <motion.div
-              key={index}
+              key={job.role}
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1 * index }}
+              transition={{ delay: 0.2 }}
               className="group relative rounded-xl p-8 bg-gradient-to-r from-gray-50/50 via-white/50 to-gray-50/50 dark:from-gray-900/50 dark:via-gray-800/50 dark:to-gray-900/50 border border-gray-100 dark:border-gray-800 hover:border-blue-500/30 dark:hover:border-blue-500/30 transition-all duration-300 cursor-pointer mb-8"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 dark:from-blue-500/[0.07] dark:to-purple-500/[0.07] rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
