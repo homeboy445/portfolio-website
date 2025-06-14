@@ -280,7 +280,7 @@ export default function AboutPage() {
           }}
           className="flex flex-wrap gap-3"
         >
-          {portfolioData.toolsAndTech.map((tool, index) => (
+          {portfolioData.toolsAndTech.map((tool) => (
             <motion.span
               key={tool}
               variants={{
