@@ -96,7 +96,7 @@ export default function AboutPage() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, type: "spring", stiffness: 80 }}
-        className={`flex flex-col md:flex-row items-center gap-8 ${properties.sections.marginBottom}`}
+        className={`flex flex-col md:flex-row items-center justify-center mr-3 gap-8 ${properties.sections.marginBottom}`}
       >
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}

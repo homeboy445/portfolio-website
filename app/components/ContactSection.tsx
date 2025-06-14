@@ -2,10 +2,11 @@
 
 import { motion } from 'framer-motion';
 import portfolioData from '../data.js';
+import { isMobile } from '../utils/index.js';
 
 export default function ContactSection() {
 	return (
-		<section className="py-[5%] px-4 transition-colors duration-300 mt-[1%]">
+		<section className={`${isMobile(typeof window === 'undefined' ? {} : window) ? "py-[50%]" : "py-[5%]"} px-4 transition-colors duration-300 mt-[1%]`}>
 			<div className="max-w-4xl mx-auto text-center">
 				<motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-8">
 					<h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 transition-colors duration-300">Let&apos;s Build Something Amazing</h2>

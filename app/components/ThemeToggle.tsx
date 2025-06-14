@@ -47,6 +47,8 @@ export default function ThemeToggle() {
 
   return (
     <button
+      style={{ visibility: "hidden" }}
+      disabled={true}
       aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
       onClick={toggleTheme}
       className="fixed top-6 right-8 z-50 p-2 rounded-full transition-all duration-300 ease-in-out
