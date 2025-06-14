@@ -23,22 +23,26 @@ export default function AboutPage() {
   }, []);
 
   const showNavigationBar = useCallback(() => {
+    if (typeof window === 'undefined') return false;
     return window.innerWidth >= 1000;
   }, []);
 
-  const [shouldRenderNavigationBar, setShouldRenderNavigationBar] = useState(
-    showNavigationBar()
-  );
+  const [shouldRenderNavigationBar, setShouldRenderNavigationBar] = useState(false);
 
   useEffect(() => {
+    // Set initial state
+    setShouldRenderNavigationBar(showNavigationBar());
+
     const handleResize = () => {
       setShouldRenderNavigationBar(showNavigationBar());
     };
 
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    if (typeof window !== 'undefined') {
+      window.addEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
   }, [showNavigationBar]);
 
   return (
@@ -66,10 +70,9 @@ export default function AboutPage() {
               href={`#${section.id}`}
               className="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
               onClick={(e) => {
-                debugger;
                 e.preventDefault();
                 const element = section.ref.current;
-                if (element) {
+                if (element && typeof window !== 'undefined') {
                   const rect = element.getBoundingClientRect();
                   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
                   const targetPosition = rect.top + scrollTop - 200; // 100px offset from top
