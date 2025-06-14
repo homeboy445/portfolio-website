@@ -6,7 +6,7 @@ import ContactSection from './components/ContactSection';
 
 export default function FullStackPortfolio() {
 	return (
-		<main className="min-h-screen bg-background text-foreground mt-32">
+		<main className="min-h-screen bg-background text-foreground mt-22">
 			<HeroSection />
 			<ProjectsSection />
 			<ContactSection />

@@ -1,7 +1,7 @@
 const portfolioData = {
   name: "Akshit Kushwaha",
   title: "Software Engineer",
-  bio: "Based in New Delhi, I&apos;m a software engineer who loves crafting high-performance, scalable systems that solve real-world problems.",
+  bio: "Based in New Delhi, I'm a software engineer who loves crafting high-performance, scalable systems that solve real-world problems.",
   description: "At the heart of my journey is my work as a key contributor to the core JavaScript engine powering large-scale experimentation platforms—used by millions across the globe. From designing cross-thread sync modules and performance-optimized architectures to building full-stack tools and Chrome extensions, I've had the chance to work on everything from frontend interfaces to CDN infrastructure.",
   contact: {
     email: "akshitsan13@gmail.com",
