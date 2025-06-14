@@ -67,7 +67,7 @@ export default function ContactPage() {
                             animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
                             transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
                         >
-                            Let's Connect
+                            Let&apos;s Connect
                         </motion.h1>
                         <motion.div 
                             className="h-1 w-24 mx-auto bg-gradient-to-r from-blue-600 via-purple-600 to-teal-600 rounded-full"
